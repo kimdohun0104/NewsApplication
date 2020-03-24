@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">NewsApplication</string>
+
+    <!--feature: splash-->
+    <string name="splash_version">v 1.0</string>
+    <string name="splash_description1">최신 뉴스를 제공합니다.</string>
+    <string name="splash_description2">뉴스의 키워드를 알아보세요</string>
+    <string name="splash_description3">뉴스를 클릭하면 원본 뉴스를 볼 수 있습니다.</string>
+
+    <!--content description-->
+    <string name="description_splash_logo">뉴스 애플리케이션 로고</string>
 </resources>
