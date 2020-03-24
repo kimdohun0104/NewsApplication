@@ -4,6 +4,7 @@ import dependencies.Versions
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion Versions.compileSdkVersion
@@ -29,8 +30,12 @@ android {
 
 dependencies {
     implementation Deps.Kotlin.kotlin
+    implementation Deps.Kotlin.coroutineCore
 
     implementation Deps.AndroidX.appCompat
     implementation Deps.AndroidX.coreKtx
     implementation Deps.AndroidX.constraintLayout
+
+    implementation Deps.AndroidX.LifeCycle.lifecycleKtx
+    kapt Deps.AndroidX.LifeCycle.compiler
 }
