@@ -1,9 +1,10 @@
-package com.dohun.news
+package com.dohun.news.ui
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.dohun.news.R
 import kotlinx.coroutines.delay
 
 class SplashActivity : AppCompatActivity() {

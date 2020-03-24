@@ -1,2 +1,6 @@
 rootProject.name='NewsApplication'
 include ':app'
+include ':remote'
+include ':local'
+include ':repository'
+include ':model'

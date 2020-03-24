@@ -1,0 +1,15 @@
+import dependencies.Deps
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+apply from: rootProject.file('gradle/android.gradle')
+
+dependencies {
+    implementation project(path: ':local')
+    implementation project(path: ':remote')
+    implementation project(path: ':model')
+
+    implementation Deps.Kotlin.kotlin
+}

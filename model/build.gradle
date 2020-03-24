@@ -1,0 +1,11 @@
+import dependencies.Deps
+
+apply plugin: 'java-library'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation Deps.Kotlin.kotlin
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

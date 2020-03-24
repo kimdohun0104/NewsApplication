@@ -29,6 +29,11 @@ android {
 }
 
 dependencies {
+    implementation project(path: ':local')
+    implementation project(path: ':remote')
+    implementation project(path: ':repository')
+    implementation project(path: ':model')
+
     implementation Deps.Kotlin.kotlin
     implementation Deps.Kotlin.coroutineCore
 

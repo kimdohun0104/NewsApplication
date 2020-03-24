@@ -1,7 +1,8 @@
-package com.dohun.news
+package com.dohun.news.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.dohun.news.R
 
 class MainActivity : AppCompatActivity() {
 
