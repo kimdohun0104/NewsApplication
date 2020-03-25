@@ -13,7 +13,6 @@ import org.junit.Test
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations
-import java.io.IOException
 
 class RemoteNewsDataSourceTests {
 
@@ -42,14 +41,6 @@ class RemoteNewsDataSourceTests {
         }
 
         assertEquals(dataSource.getNewsList(), NewsResponseDummy.afterMetadata)
-    }
-
-    @Test(expected = IOException::class)
-    fun `뉴스 파싱 IOException 테스트`() = runBlocking {
-        `when`(newsParser.parse()).thenThrow(IOException())
-
-        dataSource.getNewsList()
-        Unit
     }
 
     @Test

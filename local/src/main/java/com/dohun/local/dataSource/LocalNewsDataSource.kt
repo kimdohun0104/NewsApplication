@@ -4,7 +4,7 @@ import com.dohun.local.entity.NewsEntity
 
 interface LocalNewsDataSource {
 
-    suspend fun getNewsList(): List<NewsEntity>
+    suspend fun getNewsList(): List<NewsEntity>?
 
     suspend fun deleteNewsList()
 

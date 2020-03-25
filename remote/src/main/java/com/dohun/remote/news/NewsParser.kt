@@ -3,14 +3,12 @@ package com.dohun.remote.news
 import android.util.Xml
 import com.dohun.remote.response.NewsResponse
 import org.xmlpull.v1.XmlPullParser
-import java.io.IOException
 import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.URL
 
 interface NewsParser {
 
-    @Throws(IOException::class)
     fun parse(): List<NewsResponse>
 }
 

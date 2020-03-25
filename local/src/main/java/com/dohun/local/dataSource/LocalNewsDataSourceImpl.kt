@@ -9,7 +9,7 @@ class LocalNewsDataSourceImpl(
     private val newsDao: NewsDao
 ) : LocalNewsDataSource {
 
-    override suspend fun getNewsList(): List<NewsEntity> = withContext(Dispatchers.IO) {
+    override suspend fun getNewsList(): List<NewsEntity>? = withContext(Dispatchers.IO) {
         newsDao.selectList()
     }
 

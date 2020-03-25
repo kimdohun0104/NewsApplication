@@ -12,4 +12,12 @@ dependencies {
     implementation project(path: ':model')
 
     implementation Deps.Kotlin.kotlin
+    implementation Deps.Kotlin.coroutineCore
+
+    implementation Deps.AndroidX.Koin.ext
+
+    testImplementation Deps.Test.coroutinesTest
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.mockitoCore
+    testImplementation Deps.Test.mockitoInline
 }

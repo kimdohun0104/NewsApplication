@@ -13,7 +13,7 @@ interface NewsDao {
     suspend fun insertList(newsList: List<NewsEntity>)
 
     @Query("select * from News")
-    suspend fun selectList(): List<NewsEntity>
+    suspend fun selectList(): List<NewsEntity>?
 
     @Query("delete from News")
     suspend fun deleteList()
