@@ -21,7 +21,9 @@ object Deps {
 
         object LifeCycle {
             private const val version = "2.2.0"
-            const val lifecycleKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$version"
+            const val viewModelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$version"
+            const val liveDataKtx = "androidx.lifecycle:lifecycle-livedata-ktx:$version"
+            const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$version"
             const val compiler = "androidx.lifecycle:lifecycle-compiler:$version"
         }
 
