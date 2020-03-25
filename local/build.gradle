@@ -3,9 +3,17 @@ import dependencies.Deps
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 apply from: rootProject.file('gradle/android.gradle')
 
 dependencies {
     implementation Deps.Kotlin.kotlin
+    implementation Deps.Kotlin.coroutineCore
+
+    implementation Deps.AndroidX.Room.runtime
+    implementation Deps.AndroidX.Room.ktx
+    kapt Deps.AndroidX.Room.compiler
+
+    implementation Deps.AndroidX.Koin.ext
 }

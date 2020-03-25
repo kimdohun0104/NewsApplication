@@ -14,7 +14,7 @@ dependencies {
 
     implementation Deps.AndroidX.Koin.ext
 
-    implementation Deps.Test.junit
-    implementation Deps.Test.mockitoCore
-    implementation Deps.Test.coroutinesTest
+    testImplementation Deps.Test.junit
+    testImplementation Deps.Test.mockitoCore
+    testImplementation Deps.Test.coroutinesTest
 }

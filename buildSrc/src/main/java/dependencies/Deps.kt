@@ -30,6 +30,13 @@ object Deps {
             const val viewModel = "org.koin:koin-androidx-viewmodel:$version"
             const val ext = "org.koin:koin-androidx-ext:$version"
         }
+
+        object Room {
+            private const val version = "2.2.3"
+            const val runtime = "androidx.room:room-runtime:$version"
+            const val compiler = "androidx.room:room-compiler:$version"
+            const val ktx = "androidx.room:room-ktx:$version"
+        }
     }
 
     object Test {
