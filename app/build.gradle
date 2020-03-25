@@ -43,4 +43,7 @@ dependencies {
 
     implementation Deps.AndroidX.LifeCycle.lifecycleKtx
     kapt Deps.AndroidX.LifeCycle.compiler
+
+    implementation Deps.AndroidX.Koin.viewModel
+    implementation Deps.AndroidX.Koin.ext
 }
