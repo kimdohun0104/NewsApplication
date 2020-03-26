@@ -48,7 +48,6 @@
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:contentDescription="@null"
-            android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="@id/gl_bottom"
             app:layout_constraintLeft_toLeftOf="@id/gl_start"
             app:layout_constraintTop_toTopOf="@id/gl_top" />

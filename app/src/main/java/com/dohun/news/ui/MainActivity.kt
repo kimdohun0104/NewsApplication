@@ -1,5 +1,6 @@
 package com.dohun.news.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
@@ -24,8 +25,20 @@ class MainActivity : AppCompatActivity() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
+        setupSkeleton()
         setupSnackbar()
         setupRecyclerView()
+        setupSwipeRefreshLayout()
+    }
+
+    @SuppressLint("InflateParams")
+    private fun setupSkeleton() {
+        val deviceHeight = resources.displayMetrics.heightPixels
+        val skeletonHeight = resources.getDimensionPixelSize(R.dimen.skeleton_height)
+
+        repeat(deviceHeight / skeletonHeight) {
+            binding.llSkeleton.addView(layoutInflater.inflate(R.layout.layout_news_skeleton, null))
+        }
     }
 
     private fun setupSnackbar() {
@@ -44,5 +57,9 @@ class MainActivity : AppCompatActivity() {
         binding.rvNews.adapter = NewsListAdapter()
         binding.rvNews.hasFixedSize()
         binding.rvNews.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+    }
+
+    private fun setupSwipeRefreshLayout() {
+        binding.srlNews.setOnRefreshListener { viewModel.loadNewsList() }
     }
 }

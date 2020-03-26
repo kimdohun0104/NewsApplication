@@ -10,6 +10,7 @@
     <color name="colorOrange300">#FFB74D</color>
 
     <color name="colorBlue600">#1E88E5</color>
-    
+
+    <color name="colorGray300">#E0E0E0</color>
     <color name="colorGray600">#757575</color>
 </resources>

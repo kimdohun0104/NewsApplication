@@ -6,9 +6,12 @@ import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.dohun.model.NewsModel
 import com.dohun.news.R
 import com.dohun.news.ui.adapter.NewsListAdapter
+
 
 @BindingAdapter("newsList")
 internal fun RecyclerView.bindNewsList(newsListLiveData: LiveData<List<NewsModel>>) {
@@ -23,6 +26,7 @@ internal fun ImageView.bindImageUrlWithHolder(imageUrl: String?) {
         .load(imageUrl)
         .placeholder(R.drawable.ic_image)
         .error(R.drawable.ic_broken_image)
+        .transform(CenterCrop(), RoundedCorners(24))
         .into(this)
 }
 
