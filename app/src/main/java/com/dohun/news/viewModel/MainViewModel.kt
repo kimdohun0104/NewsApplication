@@ -1,5 +1,6 @@
 package com.dohun.news.viewModel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,18 +21,26 @@ class MainViewModel(
     private val _retrySnackbarEvent = SingleLiveEvent<Unit>()
     val retrySnackbarEvent: LiveData<Unit> = _retrySnackbarEvent
 
+    private val _isNewsLoading = MutableLiveData<Boolean>()
+    val isNewsLoading: LiveData<Boolean> = _isNewsLoading
+
     init {
         loadNewsList()
     }
 
     fun loadNewsList() = viewModelScope.launch {
+        _isNewsLoading.value = true
+
         val result = newsRepository.getNewsList()
         if (result is Success) {
+            Log.d("DEBUGLOG", result.data.toString())
             _newsList.value = result.data
 
             if (result.isLocal) _retrySnackbarEvent.call()
         } else {
             _retrySnackbarEvent.call()
         }
+
+        _isNewsLoading.value = false
     }
 }

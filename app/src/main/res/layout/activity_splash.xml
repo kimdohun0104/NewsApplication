@@ -10,7 +10,7 @@
         android:id="@+id/iv_logo_circle"
         android:layout_width="168dp"
         android:layout_height="168dp"
-        android:background="@drawable/bg_circle"
+        android:background="@drawable/bg_circle_primary"
         android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="@id/iv_logo"
         app:layout_constraintLeft_toLeftOf="@id/iv_logo"

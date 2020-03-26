@@ -2,10 +2,17 @@ package dependencies
 
 object Deps {
     const val jsoup = "org.jsoup:jsoup:1.13.1"
+    const val material = "com.google.android.material:material:1.1.0"
 
     object GradlePlugin {
         const val gradle = "com.android.tools.build:gradle:3.6.1"
         const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Kotlin.version}"
+    }
+
+    object Glide {
+        private const val version = "4.11.0"
+        const val glide = "com.github.bumptech.glide:glide:$version"
+        const val compiler = "com.github.bumptech.glide:compiler:$version"
     }
 
     object Kotlin {
