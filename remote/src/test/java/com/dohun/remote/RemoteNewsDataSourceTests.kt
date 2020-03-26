@@ -6,8 +6,8 @@ import com.dohun.remote.dummy.CrawledMetadataDummy
 import com.dohun.remote.dummy.NewsResponseDummy
 import com.dohun.remote.news.MetadataCrawler
 import com.dohun.remote.news.NewsParser
-import junit.framework.Assert.assertEquals
 import kotlinx.coroutines.runBlocking
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.mockito.Mock
@@ -49,7 +49,7 @@ class RemoteNewsDataSourceTests {
         val newsList = newsParser.parse()
         newsList.forEachIndexed { index, news ->
             if (index == 0) {
-                `when`(metadataCrawler.crawlMetadata(news.link ?: "")).thenThrow(Exception())
+                `when`(metadataCrawler.crawlMetadata(news.link ?: "")).thenThrow(RuntimeException())
             } else {
                 `when`(metadataCrawler.crawlMetadata(news.link ?: ""))
                     .thenReturn(CrawledMetadataDummy.getMetadataByIndex(index))

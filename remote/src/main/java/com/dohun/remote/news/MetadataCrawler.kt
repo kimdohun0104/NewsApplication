@@ -11,7 +11,6 @@ data class CrawledMetadata(
 
 interface MetadataCrawler {
 
-    @Throws(Exception::class)
     fun crawlMetadata(link: String): CrawledMetadata
 }
 

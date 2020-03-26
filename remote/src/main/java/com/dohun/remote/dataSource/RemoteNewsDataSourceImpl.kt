@@ -16,22 +16,19 @@ class RemoteNewsDataSourceImpl(
         }
     }
 
-    private suspend fun setCrawledDataToList(list: List<NewsResponse>) = withContext(Dispatchers.IO) {
-        val crawlingTask = mutableListOf<Deferred<Unit?>>()
-        list.forEach { news ->
-            crawlingTask.add(async {
+    private suspend fun setCrawledDataToList(list: List<NewsResponse>) = coroutineScope {
+        val threadPool = newFixedThreadPoolContext(6, "crawlingThread")
+        list.map { news ->
+            async(threadPool) {
                 news.link?.let { link ->
                     try {
                         val meta = metadataCrawler.crawlMetadata(link)
                         news.description = meta.description
                         news.thumbnail = meta.image
-                    } catch(e: Exception) {
-                        news.description = null
-                        news.thumbnail = null
+                    } catch (e: Exception) {
                     }
                 }
-            })
-        }
-        crawlingTask.awaitAll()
+            }
+        }.awaitAll()
     }
 }

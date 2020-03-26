@@ -6,6 +6,7 @@ import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.dohun.model.NewsModel
@@ -27,6 +28,7 @@ internal fun ImageView.bindImageUrlWithHolder(imageUrl: String?) {
         .placeholder(R.drawable.ic_image)
         .error(R.drawable.ic_broken_image)
         .transform(CenterCrop(), RoundedCorners(24))
+        .format(DecodeFormat.PREFER_RGB_565)
         .into(this)
 }
 
