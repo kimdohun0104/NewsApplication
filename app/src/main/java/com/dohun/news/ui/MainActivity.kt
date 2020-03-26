@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         binding.rvNews.adapter = NewsListAdapter()
-
+        binding.rvNews.hasFixedSize()
         binding.rvNews.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
     }
 }

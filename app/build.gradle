@@ -37,6 +37,8 @@ dependencies {
     implementation Deps.material
 
     implementation Deps.Glide.glide
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     kapt Deps.Glide.compiler
 
     implementation Deps.Kotlin.kotlin

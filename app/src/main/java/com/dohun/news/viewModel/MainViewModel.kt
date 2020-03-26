@@ -1,6 +1,5 @@
 package com.dohun.news.viewModel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -33,7 +32,6 @@ class MainViewModel(
 
         val result = newsRepository.getNewsList()
         if (result is Success) {
-            Log.d("DEBUGLOG", result.data.toString())
             _newsList.value = result.data
 
             if (result.isLocal) _retrySnackbarEvent.call()

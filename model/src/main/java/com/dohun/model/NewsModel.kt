@@ -1,5 +1,9 @@
 package com.dohun.model
 
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
 data class NewsModel(
 
     val guid: String,
@@ -13,4 +17,4 @@ data class NewsModel(
     val description: String?,
 
     val tags: String?
-)
+) : Parcelable

@@ -1,5 +1,6 @@
 package com.dohun.news.ui.binding
 
+import android.webkit.WebView
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LiveData
@@ -16,11 +17,25 @@ internal fun RecyclerView.bindNewsList(newsListLiveData: LiveData<List<NewsModel
     }
 }
 
-@BindingAdapter("imageUrl")
-internal fun ImageView.bindImageUrl(imageUrl: String?) {
+@BindingAdapter("imageUrlWithHolder")
+internal fun ImageView.bindImageUrlWithHolder(imageUrl: String?) {
     Glide.with(context)
         .load(imageUrl)
         .placeholder(R.drawable.ic_image)
         .error(R.drawable.ic_broken_image)
         .into(this)
+}
+
+@BindingAdapter("imageUrl")
+internal fun ImageView.bindImageUrl(imageUrl: String?) {
+    Glide.with(context)
+        .load(imageUrl)
+        .into(this)
+}
+
+@BindingAdapter("newsLink")
+internal fun WebView.bindNewsLink(link: String?) {
+    link?.let {
+        loadUrl(link)
+    }
 }
