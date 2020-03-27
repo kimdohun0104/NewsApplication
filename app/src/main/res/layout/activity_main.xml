@@ -22,13 +22,14 @@
             android:id="@+id/tb_news"
             android:layout_width="0dp"
             android:layout_height="?actionBarSize"
-            android:background="@android:color/white"
-            android:elevation="8dp"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:title="@string/news"
-            app:titleTextAppearance="@style/Toolbar.BoldTitle" />
+            app:titleTextAppearance="@style/Toolbar.BoldTitle"
+            app:titleTextColor="@color/colorBlack" />
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/srl_news"
