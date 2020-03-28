@@ -4,6 +4,7 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
@@ -30,13 +31,17 @@ class NewsActivity : AppCompatActivity() {
     }
 
     private fun setupWebView() {
-        binding.wbNews.webViewClient = WebViewClient()
+        binding.wbNews.run {
+            webViewClient = WebViewClient()
+            setLayerType(View.LAYER_TYPE_HARDWARE, null)
+            settings.setSupportZoom(true)
 
-        if (
-            Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
-            && (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
-        ) {
-            binding.wbNews.settings.forceDark = WebSettings.FORCE_DARK_ON
+            if (
+                Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
+                && (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES
+            ) {
+                settings.forceDark = WebSettings.FORCE_DARK_ON
+            }
         }
     }
 

@@ -6,5 +6,5 @@ data class NewsResponse(
     var link: String? = null,
     var thumbnail: String? = null,
     var description: String? = null,
-    var tags: String? = null
+    var tags: List<String>? = null
 )

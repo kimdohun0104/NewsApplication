@@ -17,5 +17,5 @@ data class NewsEntity(
 
     val description: String?,
 
-    val tags: String?
+    val tags: List<String>?
 )

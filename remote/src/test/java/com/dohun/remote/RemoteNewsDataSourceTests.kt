@@ -6,6 +6,7 @@ import com.dohun.remote.dummy.CrawledMetadataDummy
 import com.dohun.remote.dummy.NewsResponseDummy
 import com.dohun.remote.news.MetadataCrawler
 import com.dohun.remote.news.NewsParser
+import com.dohun.remote.news.TagExtractor
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Before
@@ -22,12 +23,15 @@ class RemoteNewsDataSourceTests {
     @Mock
     private lateinit var metadataCrawler: MetadataCrawler
 
+    @Mock
+    private lateinit var tagExtractor: TagExtractor
+
     private lateinit var dataSource: RemoteNewsDataSource
 
     @Before
     fun init() {
         MockitoAnnotations.initMocks(this)
-        dataSource = RemoteNewsDataSourceImpl(newsParser, metadataCrawler)
+        dataSource = RemoteNewsDataSourceImpl(newsParser, metadataCrawler, tagExtractor)
     }
 
     @Test
@@ -38,6 +42,8 @@ class RemoteNewsDataSourceTests {
         newsList.forEachIndexed { index, news ->
             `when`(metadataCrawler.crawlMetadata(news.link ?: ""))
                 .thenReturn(CrawledMetadataDummy.getMetadataByIndex(index))
+            `when`(tagExtractor.getTags(metadataCrawler.crawlMetadata(news.link ?: "").description ?: ""))
+                .thenReturn(null)
         }
 
         assertEquals(dataSource.getNewsList(), NewsResponseDummy.afterMetadata)

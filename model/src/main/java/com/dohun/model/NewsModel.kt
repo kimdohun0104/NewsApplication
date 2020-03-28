@@ -16,5 +16,5 @@ data class NewsModel(
 
     val description: String?,
 
-    val tags: String?
+    val tags: List<String>?
 ) : Parcelable

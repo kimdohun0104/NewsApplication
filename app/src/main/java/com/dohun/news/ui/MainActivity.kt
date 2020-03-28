@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupSnackbar() {
         viewModel.retrySnackbarEvent.observe(this, Observer {
-            Snackbar.make(binding.clRoot, R.string.message_network_insecure, Snackbar.LENGTH_LONG).apply {
+            Snackbar.make(binding.clRoot, R.string.message_network_insecure, Snackbar.LENGTH_INDEFINITE).apply {
                 setAction(R.string.retry) {
                     viewModel.loadNewsList()
                     dismiss()
