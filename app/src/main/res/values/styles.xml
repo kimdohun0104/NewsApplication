@@ -12,4 +12,8 @@
     <style name="Toolbar.BoldTitle" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
         <item name="android:textStyle">bold</item>
     </style>
+
+    <style name="SmallerText" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">11sp</item>
+    </style>
 </resources>

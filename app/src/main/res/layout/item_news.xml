@@ -89,16 +89,15 @@
             app:layout_constraintLeft_toLeftOf="@id/tv_title"
             app:layout_constraintRight_toRightOf="@id/gl_end">
 
-            <TextView
+            <com.google.android.material.chip.ChipGroup
                 android:id="@+id/tv_tag"
                 tags="@{news.tags}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:bufferType="spannable"
-                android:singleLine="true" />
+                android:singleLine="true"
+                app:chipSpacingVertical="4dp" />
 
         </HorizontalScrollView>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
