@@ -37,7 +37,6 @@ internal fun ImageView.bindImageUrlWithHolder(imageUrl: String?) {
 internal fun ImageView.bindImageUrl(imageUrl: String?) {
     Glide.with(context)
         .load(imageUrl)
-        .centerCrop()
         .into(this)
 }
 

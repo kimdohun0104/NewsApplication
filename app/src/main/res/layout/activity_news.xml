@@ -47,6 +47,7 @@
                     <ImageView
                         imageUrl="@{news.thumbnail}"
                         android:layout_width="match_parent"
+                        android:scaleType="centerCrop"
                         android:layout_height="match_parent"
                         android:contentDescription="@null" />
 

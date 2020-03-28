@@ -12,7 +12,7 @@ val localModule = module {
         Room.databaseBuilder(get(), AppDatabase::class.java, "news.db").build()
     }
 
-    factory { get<AppDatabase>().newsDao() }
+    single { get<AppDatabase>().newsDao() }
 
     factory<LocalNewsDataSource> { LocalNewsDataSourceImpl(get()) }
 }

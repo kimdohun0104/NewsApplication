@@ -23,13 +23,26 @@ class MainViewModel(
     private val _isRefreshing = MutableLiveData<Boolean>()
     val isRefreshing: LiveData<Boolean> = _isRefreshing
 
+    private val _isInitialLoading = MutableLiveData<Boolean>()
+    val isInitialLoading: LiveData<Boolean> = _isInitialLoading
+
     init {
-        loadNewsList()
+        initialLoad()
     }
 
-    fun loadNewsList() = viewModelScope.launch {
+    fun refreshNewsList() = viewModelScope.launch {
         _isRefreshing.value = true
+        loadNewsList()
+        _isRefreshing.value = false
+    }
 
+    fun initialLoad() = viewModelScope.launch {
+        _isInitialLoading.value = true
+        loadNewsList()
+        _isInitialLoading.value = false
+    }
+
+    private suspend fun loadNewsList() {
         val result = newsRepository.getNewsList()
         if (result is Success) {
             _newsList.value = result.data
@@ -38,7 +51,5 @@ class MainViewModel(
         } else {
             _retrySnackbarEvent.call()
         }
-
-        _isRefreshing.value = false
     }
 }

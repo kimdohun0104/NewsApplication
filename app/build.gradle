@@ -38,7 +38,6 @@ dependencies {
     implementation Deps.AndroidX.swipeRefreshLayout
 
     implementation Deps.Glide.glide
-    kapt Deps.Glide.compiler
 
     implementation Deps.Kotlin.kotlin
     implementation Deps.Kotlin.coroutineCore

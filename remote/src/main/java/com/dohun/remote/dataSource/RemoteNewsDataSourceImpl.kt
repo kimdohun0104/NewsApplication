@@ -12,6 +12,8 @@ class RemoteNewsDataSourceImpl(
     private val tagExtractor: TagExtractor
 ) : RemoteNewsDataSource {
 
+    private val threadPool = newFixedThreadPoolContext(6, "crawlingThread")
+
     override suspend fun getNewsList(): List<NewsResponse> = withContext(Dispatchers.IO) {
         newsParser.parse().apply {
             setCrawledDataToList(this)
@@ -19,7 +21,6 @@ class RemoteNewsDataSourceImpl(
     }
 
     private suspend fun setCrawledDataToList(list: List<NewsResponse>) = coroutineScope {
-        val threadPool = newFixedThreadPoolContext(6, "crawlingThread")
         list.map { news ->
             async(threadPool) {
                 news.link?.let { link ->

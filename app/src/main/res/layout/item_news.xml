@@ -45,8 +45,8 @@
         <ImageView
             android:id="@+id/iv_thumbnail"
             imageUrlWithHolder="@{news.thumbnail}"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:contentDescription="@null"
             app:layout_constraintBottom_toBottomOf="@id/gl_bottom"
             app:layout_constraintLeft_toLeftOf="@id/gl_start"
@@ -57,11 +57,10 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="2dp"
             android:singleLine="true"
             android:text="@{news.title}"
             android:textColor="@color/colorBlackTitle"
-            android:textSize="16sp"
+            android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toRightOf="@id/iv_thumbnail"
             app:layout_constraintRight_toRightOf="@id/gl_end"
@@ -74,7 +73,7 @@
             android:maxLines="2"
             android:text="@{news.description}"
             android:textColor="@color/colorBlackDescription"
-            android:textSize="14sp"
+            android:textSize="13sp"
             app:layout_constraintBottom_toTopOf="@id/hsv_tag"
             app:layout_constraintLeft_toLeftOf="@id/tv_title"
             app:layout_constraintRight_toRightOf="@id/gl_end"
@@ -94,8 +93,6 @@
                 tags="@{news.tags}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:bufferType="spannable"
-                android:singleLine="true"
                 app:chipSpacingVertical="4dp" />
 
         </HorizontalScrollView>

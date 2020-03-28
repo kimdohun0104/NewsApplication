@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
         viewModel.retrySnackbarEvent.observe(this, Observer {
             Snackbar.make(binding.clRoot, R.string.message_network_insecure, Snackbar.LENGTH_INDEFINITE).apply {
                 setAction(R.string.retry) {
-                    viewModel.loadNewsList()
+                    viewModel.refreshNewsList()
                     dismiss()
                 }
                 show()
@@ -60,6 +60,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupSwipeRefreshLayout() {
-        binding.srlNews.setOnRefreshListener { viewModel.loadNewsList() }
+        binding.srlNews.setOnRefreshListener { viewModel.refreshNewsList() }
     }
 }
