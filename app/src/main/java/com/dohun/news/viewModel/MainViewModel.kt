@@ -1,12 +1,10 @@
 package com.dohun.news.viewModel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dohun.model.NewsModel
-import com.dohun.model.Result
 import com.dohun.model.Result.Success
 import com.dohun.model.repository.NewsRepository
 import com.dohun.news.util.SingleLiveEvent
@@ -38,7 +36,6 @@ class MainViewModel(
 
             if (result.isLocal) _retrySnackbarEvent.call()
         } else {
-            Log.d("DEBUGLOG", (result as Result.Failure).exception.message.toString())
             _retrySnackbarEvent.call()
         }
 

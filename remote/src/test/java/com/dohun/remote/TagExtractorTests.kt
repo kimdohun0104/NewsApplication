@@ -49,4 +49,11 @@ class TagExtractorTests {
         val result = tagExtractor.getTags(test)
         assertEquals(result, null)
     }
+
+    @Test
+    fun test6() {
+        val test = "EPL이 돌아본 아시아 선수 '최고의 골'…12골 중 3골이 손흥민, 최송아기자, 스포츠뉴스 (송고시간 2020-03-28 15:04)"
+        val result = tagExtractor.getTags(test)
+        println(result)
+    }
 }

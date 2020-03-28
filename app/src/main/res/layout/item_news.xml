@@ -75,17 +75,30 @@
             android:text="@{news.description}"
             android:textColor="@color/colorBlackDescription"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@id/cg_tag"
+            app:layout_constraintBottom_toTopOf="@id/hsv_tag"
             app:layout_constraintLeft_toLeftOf="@id/tv_title"
             app:layout_constraintRight_toRightOf="@id/gl_end"
             app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/cg_tag"
-            android:layout_width="wrap_content"
+        <HorizontalScrollView
+            android:id="@+id/hsv_tag"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="@id/gl_bottom"
-            app:layout_constraintLeft_toLeftOf="@id/tv_title" />
+            app:layout_constraintLeft_toLeftOf="@id/tv_title"
+            app:layout_constraintRight_toRightOf="@id/gl_end">
+
+            <TextView
+                android:id="@+id/tv_tag"
+                tags="@{news.tags}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:bufferType="spannable"
+                android:singleLine="true" />
+
+        </HorizontalScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
