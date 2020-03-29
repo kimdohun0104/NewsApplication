@@ -1,7 +1,9 @@
 package com.dohun.news.ui.binding
 
+import android.view.View
 import android.webkit.WebView
 import android.widget.ImageView
+import androidx.core.view.children
 import androidx.databinding.BindingAdapter
 import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
@@ -49,15 +51,12 @@ internal fun WebView.bindNewsLink(link: String?) {
 
 @BindingAdapter("tags")
 internal fun ChipGroup.bindTags(tags: List<String>?) {
-    tags?.let {
-        removeAllViews()
-        it.forEach { tag ->
-            addView(
-                Chip(context).apply {
-                    setTextAppearance(R.style.SmallerText)
-                    text = tag
-                }
-            )
+    children.forEachIndexed { index, view ->
+        if (tags == null || tags.size <= index) {
+            view.visibility = View.GONE
+        } else {
+            view.visibility = View.VISIBLE
+            (view as Chip).text = tags[index]
         }
     }
 }

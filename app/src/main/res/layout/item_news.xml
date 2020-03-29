@@ -89,12 +89,37 @@
             app:layout_constraintRight_toRightOf="@id/gl_end">
 
             <com.google.android.material.chip.ChipGroup
-                android:id="@+id/tv_tag"
+                android:id="@+id/cg_tag"
                 tags="@{news.tags}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:chipSpacingVertical="4dp" />
+                app:chipSpacingVertical="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/gl_bottom"
+                app:layout_constraintLeft_toLeftOf="@id/tv_title"
+                app:layout_constraintRight_toRightOf="@id/gl_end"
+                app:singleLine="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_first"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/SmallerText" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/SmallerText" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_third"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/SmallerText" />
+            </com.google.android.material.chip.ChipGroup>
 
         </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </layout>
