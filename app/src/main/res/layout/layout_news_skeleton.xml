@@ -6,8 +6,8 @@
 
     <View
         android:id="@+id/view_thumbnail"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:layout_marginBottom="12dp"
@@ -37,6 +37,33 @@
         app:layout_constraintLeft_toLeftOf="@id/view_title"
         app:layout_constraintRight_toRightOf="@id/view_title"
         app:layout_constraintTop_toBottomOf="@id/view_title" />
+
+    <View
+        android:id="@+id/view_tag1"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@drawable/bg_skeleton"
+        app:layout_constraintBottom_toBottomOf="@id/view_thumbnail"
+        app:layout_constraintLeft_toLeftOf="@id/view_description" />
+
+    <View
+        android:id="@+id/view_tag2"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_skeleton"
+        app:layout_constraintBottom_toBottomOf="@id/view_tag1"
+        app:layout_constraintLeft_toRightOf="@id/view_tag1"
+        app:layout_constraintTop_toTopOf="@id/view_tag1" />
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_skeleton"
+        app:layout_constraintBottom_toBottomOf="@id/view_tag2"
+        app:layout_constraintLeft_toRightOf="@id/view_tag2"
+        app:layout_constraintTop_toTopOf="@id/view_tag2" />
 
     <View
         android:layout_width="0dp"
