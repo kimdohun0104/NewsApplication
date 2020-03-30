@@ -65,5 +65,5 @@ class NewsActivity : AppCompatActivity() {
         binding.tbNews.navigationIcon?.setTint(color)
 
     private fun animateTitle(alpha: Float) =
-        binding.tvTitle.animate().alpha(alpha).setDuration(50L)
+        binding.tvToolbarTitle.animate().alpha(alpha).setDuration(50L)
 }

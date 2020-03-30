@@ -60,3 +60,16 @@ internal fun ChipGroup.bindTags(tags: List<String>?) {
         }
     }
 }
+
+@BindingAdapter("tagsDetail")
+internal fun ChipGroup.bindTagsDetail(tags: List<String>?) {
+    tags?.let {
+        it.forEach { tag ->
+            addView(
+                Chip(context).apply {
+                    text = tag
+                }
+            )
+        }
+    }
+}

@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("InflateParams")
     private fun setupSkeleton() {
         val deviceHeight = resources.displayMetrics.heightPixels
-        val skeletonHeight = resources.getDimensionPixelSize(R.dimen.skeleton_height)
+        val skeletonHeight = resources.getDimensionPixelSize(R.dimen.news_item_height)
 
         repeat(deviceHeight / skeletonHeight) {
             binding.llSkeleton.addView(layoutInflater.inflate(R.layout.layout_news_skeleton, null))
