@@ -1,10 +1,13 @@
 package com.dohun.news.ui
 
 import android.content.res.Configuration
+import android.graphics.Bitmap
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.webkit.WebSettings
+import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -31,12 +34,15 @@ class NewsActivity : AppCompatActivity() {
 
     private fun setupWebView() {
         binding.wbNews.run {
-            webViewClient = WebViewClient()
-            settings.displayZoomControls = false
-            settings.loadWithOverviewMode = true
-            settings.builtInZoomControls = true
-            settings.useWideViewPort = true
-            settings.setSupportZoom(true)
+            webViewClient = object: WebViewClient() {
+                override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
+                    binding.pbNews.visibility = View.VISIBLE
+                }
+
+                override fun onPageFinished(view: WebView?, url: String?) {
+                    binding.pbNews.visibility = View.GONE
+                }
+            }
 
             if (
                 Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q
@@ -44,6 +50,12 @@ class NewsActivity : AppCompatActivity() {
             ) {
                 settings.forceDark = WebSettings.FORCE_DARK_ON
             }
+
+            settings.displayZoomControls = false
+            settings.loadWithOverviewMode = true
+            settings.builtInZoomControls = true
+            settings.useWideViewPort = true
+            settings.setSupportZoom(true)
         }
     }
 
