@@ -4,6 +4,7 @@
 
     <!--message-->
     <string name="message_network_insecure">네트워크가 불안정합니다</string>
+    <string name="message_back_press_to_finish">뒤로 버튼을 한 번 더 누르시면 종료됩니다</string>
 
     <!--content description-->
     <string name="description_splash_logo">뉴스 애플리케이션 로고</string>
