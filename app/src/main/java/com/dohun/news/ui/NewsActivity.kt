@@ -4,7 +4,6 @@ import android.content.res.Configuration
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.view.View
 import android.webkit.WebSettings
 import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
@@ -33,7 +32,6 @@ class NewsActivity : AppCompatActivity() {
     private fun setupWebView() {
         binding.wbNews.run {
             webViewClient = WebViewClient()
-            setLayerType(View.LAYER_TYPE_HARDWARE, null)
             settings.displayZoomControls = false
             settings.loadWithOverviewMode = true
             settings.builtInZoomControls = true

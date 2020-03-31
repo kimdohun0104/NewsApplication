@@ -16,7 +16,9 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
-        <activity android:name=".ui.NewsActivity" />
+        <activity
+            android:name=".ui.NewsActivity"
+            android:theme="@style/AppTheme.TransparentStatusBar" />
         <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
