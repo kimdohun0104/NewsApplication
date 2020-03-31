@@ -54,9 +54,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView() {
-        binding.rvNews.adapter = NewsListAdapter()
-        binding.rvNews.hasFixedSize()
-        binding.rvNews.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
+        binding.rvNews.run {
+            setHasFixedSize(true)
+            adapter = NewsListAdapter()
+            addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL))
+        }
     }
 
     private fun setupSwipeRefreshLayout() {

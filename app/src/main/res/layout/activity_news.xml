@@ -22,7 +22,7 @@
 
             <WebView
                 android:id="@+id/wb_news"
-                newsLink="@{news.link}"
+                newsDetailLink="@{news.link}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </androidx.core.widget.NestedScrollView>
@@ -45,7 +45,7 @@
                     android:layout_height="match_parent">
 
                     <ImageView
-                        imageUrl="@{news.thumbnail}"
+                        newsDetailImage="@{news.thumbnail}"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:contentDescription="@null"
@@ -85,10 +85,11 @@
 
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/cg_tags"
-                        tagsDetail="@{news.tags}"
-                        android:layout_width="wrap_content"
+                        newsDetailTag="@{news.tags}"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         app:layout_constraintLeft_toLeftOf="@id/gl_toolbar_start"
+                        app:layout_constraintRight_toRightOf="@id/gl_toolbar_end"
                         app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,6 +26,9 @@ android {
     dataBinding {
         enabled = true
     }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
 }
 
 dependencies {
@@ -37,6 +40,7 @@ dependencies {
     implementation Deps.material
     implementation Deps.AndroidX.swipeRefreshLayout
 
+    // https://github.com/bumptech/glide
     implementation Deps.Glide.glide
 
     implementation Deps.Kotlin.kotlin
@@ -51,6 +55,7 @@ dependencies {
     implementation Deps.AndroidX.LifeCycle.runtimeKtx
     kapt Deps.AndroidX.LifeCycle.compiler
 
+    // https://github.com/InsertKoinIO/koin
     implementation Deps.AndroidX.Koin.viewModel
     implementation Deps.AndroidX.Koin.ext
 

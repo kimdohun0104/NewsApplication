@@ -10,6 +10,7 @@ dependencies {
     implementation Deps.Kotlin.kotlin
     implementation Deps.Kotlin.coroutineCore
 
+    // https://jsoup.org
     implementation Deps.jsoup
 
     implementation Deps.AndroidX.Koin.ext

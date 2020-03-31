@@ -29,18 +29,20 @@ class NewsListAdapter : ListAdapter<NewsModel, NewsListAdapter.NewsViewHolder>(D
         fun bind(position: Int) {
             val item = getItem(position)
             binding.news = item
-
-            itemView.setOnClickListener {
-                Intent(it.context, NewsActivity::class.java).apply {
-                    putExtra("news", item)
-                    it.context.startActivity(this)
-                }
-            }
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder =
-        NewsViewHolder(ItemNewsBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        NewsViewHolder(ItemNewsBinding.inflate(LayoutInflater.from(parent.context), parent, false)).apply {
+            itemView.setOnClickListener {
+                val context = it.context
+                Intent(context, NewsActivity::class.java).apply {
+                    putExtra("news", getItem(adapterPosition))
+                    context.startActivity(this)
+                }
+            }
+        }
+
 
     override fun onBindViewHolder(holder: NewsViewHolder, position: Int) = holder.bind(position)
 }

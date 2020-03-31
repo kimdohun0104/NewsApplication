@@ -17,9 +17,9 @@ import com.google.android.material.appbar.AppBarLayout
 
 class NewsActivity : AppCompatActivity() {
 
-    private val newsModel: NewsModel by lazy { intent.getParcelableExtra("news") as NewsModel }
-
     private lateinit var binding: ActivityNewsBinding
+
+    private val newsModel: NewsModel by lazy { intent.getParcelableExtra("news") as NewsModel }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +34,10 @@ class NewsActivity : AppCompatActivity() {
         binding.wbNews.run {
             webViewClient = WebViewClient()
             setLayerType(View.LAYER_TYPE_HARDWARE, null)
+            settings.displayZoomControls = false
+            settings.loadWithOverviewMode = true
+            settings.builtInZoomControls = true
+            settings.useWideViewPort = true
             settings.setSupportZoom(true)
 
             if (

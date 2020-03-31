@@ -38,28 +38,37 @@ class MainViewModelTests {
     fun `initialLoad 성공 테스트`() = runBlockingTest {
         `when`(newsRepository.getNewsList()).thenReturn(Success(NewsModelDummy.newsList))
 
+        viewModel.isInitialLoading.test().assertValue(true)
+
         viewModel.initialLoad()
 
         viewModel.newsList.test().assertValue(NewsModelDummy.newsList)
+        viewModel.isInitialLoading.test().assertValue(false)
     }
 
     @Test
     fun `initialLoad 로컬 테스트`() = runBlockingTest {
         `when`(newsRepository.getNewsList()).thenReturn(Success(NewsModelDummy.newsList, isLocal = true))
 
+        viewModel.isInitialLoading.test().assertValue(true)
+
         viewModel.initialLoad()
 
         viewModel.newsList.test().assertValue(NewsModelDummy.newsList)
         viewModel.retrySnackbarEvent.test().assertHasValue()
+        viewModel.isInitialLoading.test().assertValue(false)
     }
 
     @Test
     fun `initialLoad 실패 테스트`() = runBlockingTest {
         `when`(newsRepository.getNewsList()).thenReturn(Failure(RuntimeException()))
 
+        viewModel.isInitialLoading.test().assertValue(true)
+
         viewModel.initialLoad()
 
-        viewModel.newsList.test().assertNoValue()
+        viewModel.newsList.test().assertValue(null)
         viewModel.retrySnackbarEvent.test().assertHasValue()
+        viewModel.isInitialLoading.test().assertValue(true)
     }
 }

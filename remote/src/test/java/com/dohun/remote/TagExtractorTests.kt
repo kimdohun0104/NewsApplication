@@ -56,4 +56,11 @@ class TagExtractorTests {
         val result = tagExtractor.getTags(test)
         println(result)
     }
+
+    @Test
+    fun test7() {
+        val test = "중앙대첵본부 31일 0시 기준"
+        val result = tagExtractor.getTags(test)
+        println(result)
+    }
 }

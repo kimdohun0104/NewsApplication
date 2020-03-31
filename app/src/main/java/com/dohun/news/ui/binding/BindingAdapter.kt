@@ -17,6 +17,9 @@ import com.dohun.news.ui.adapter.NewsListAdapter
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 
+/**
+ * NewsList
+ */
 @BindingAdapter("newsList")
 internal fun RecyclerView.bindNewsList(newsListLiveData: LiveData<List<NewsModel>>) {
     newsListLiveData.value?.let { newsList ->
@@ -24,8 +27,8 @@ internal fun RecyclerView.bindNewsList(newsListLiveData: LiveData<List<NewsModel
     }
 }
 
-@BindingAdapter("imageUrlWithHolder")
-internal fun ImageView.bindImageUrlWithHolder(imageUrl: String?) {
+@BindingAdapter("newsListImage")
+internal fun ImageView.bindNewsListImage(imageUrl: String?) {
     Glide.with(context)
         .load(imageUrl)
         .placeholder(R.drawable.ic_image)
@@ -35,22 +38,8 @@ internal fun ImageView.bindImageUrlWithHolder(imageUrl: String?) {
         .into(this)
 }
 
-@BindingAdapter("imageUrl")
-internal fun ImageView.bindImageUrl(imageUrl: String?) {
-    Glide.with(context)
-        .load(imageUrl)
-        .into(this)
-}
-
-@BindingAdapter("newsLink")
-internal fun WebView.bindNewsLink(link: String?) {
-    link?.let {
-        loadUrl(link)
-    }
-}
-
-@BindingAdapter("tags")
-internal fun ChipGroup.bindTags(tags: List<String>?) {
+@BindingAdapter("newsListTags")
+internal fun ChipGroup.bindNewsListTags(tags: List<String>?) {
     children.forEachIndexed { index, view ->
         if (tags == null || tags.size <= index) {
             view.visibility = View.GONE
@@ -61,7 +50,22 @@ internal fun ChipGroup.bindTags(tags: List<String>?) {
     }
 }
 
-@BindingAdapter("tagsDetail")
+/**
+ * NewsDetail
+ */
+@BindingAdapter("newsDetailImage")
+internal fun ImageView.bindNewsDetailImage(imageUrl: String?) {
+    Glide.with(context)
+        .load(imageUrl)
+        .into(this)
+}
+
+@BindingAdapter("newsDetailLink")
+internal fun WebView.bindNewsLink(link: String?) {
+    link?.let { loadUrl(link) }
+}
+
+@BindingAdapter("newsDetailTag")
 internal fun ChipGroup.bindTagsDetail(tags: List<String>?) {
     tags?.let {
         it.forEach { tag ->
