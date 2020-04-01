@@ -38,6 +38,7 @@ dependencies {
     implementation project(path: ':model')
 
     implementation Deps.material
+    // https://github.com/facebook/shimmer-android
     implementation Deps.shimmer
 
     implementation Deps.AndroidX.swipeRefreshLayout

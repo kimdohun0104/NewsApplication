@@ -41,7 +41,8 @@ Use interface for changeable architecture. It helps to handle details like third
 3. [Koin](https://github.com/InsertKoinIO/koin)
 4. [Glide](https://github.com/bumptech/glide)
 5. [Jsoup](https://github.com/jhy/jsoup)
-6. Test
+6. [Facebook Shimmer](https://github.com/facebook/shimmer-android)
+7. Test
     1. [Mockito](https://github.com/mockito/mockito)
     2. [Coroutine Test](https://github.com/Kotlin/kotlinx.coroutines/tree/master/kotlinx-coroutines-test)
     3. [Junit](https://github.com/junit-team/junit4)
