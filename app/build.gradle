@@ -38,6 +38,8 @@ dependencies {
     implementation project(path: ':model')
 
     implementation Deps.material
+    implementation Deps.shimmer
+
     implementation Deps.AndroidX.swipeRefreshLayout
 
     // https://github.com/bumptech/glide

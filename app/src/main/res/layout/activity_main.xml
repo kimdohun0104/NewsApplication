@@ -31,16 +31,22 @@
             app:titleTextAppearance="@style/Toolbar.BoldTitle"
             app:titleTextColor="@color/colorBlack" />
 
-        <LinearLayout
-            android:id="@+id/ll_skeleton"
+        <com.facebook.shimmer.ShimmerFrameLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:orientation="vertical"
             android:visibility="@{viewModel.isInitialLoading ? View.VISIBLE : View.GONE}"
             app:layout_constraintBottom_toBottomOf="@id/srl_news"
             app:layout_constraintLeft_toLeftOf="@id/srl_news"
             app:layout_constraintRight_toRightOf="@id/srl_news"
-            app:layout_constraintTop_toTopOf="@id/srl_news" />
+            app:layout_constraintTop_toTopOf="@id/srl_news"
+            app:shimmer_auto_start="true">
+
+            <LinearLayout
+                android:id="@+id/ll_skeleton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+        </com.facebook.shimmer.ShimmerFrameLayout>
 
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
             android:id="@+id/srl_news"

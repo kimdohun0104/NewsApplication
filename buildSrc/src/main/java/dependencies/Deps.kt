@@ -3,6 +3,7 @@ package dependencies
 object Deps {
     const val jsoup = "org.jsoup:jsoup:1.13.1"
     const val material = "com.google.android.material:material:1.1.0"
+    const val shimmer = "com.facebook.shimmer:shimmer:0.5.0"
 
     object GradlePlugin {
         const val gradle = "com.android.tools.build:gradle:3.6.1"
