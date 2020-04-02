@@ -2,6 +2,7 @@ package com.dohun.news.ui.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -25,7 +26,7 @@ class NewsListAdapter : ListAdapter<NewsModel, NewsListAdapter.NewsViewHolder>(D
         }
     }
 
-    inner class NewsViewHolder(private val binding: ItemNewsBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class NewsViewHolder(val binding: ItemNewsBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(position: Int) {
             val item = getItem(position)
             binding.news = item
@@ -34,13 +35,15 @@ class NewsListAdapter : ListAdapter<NewsModel, NewsListAdapter.NewsViewHolder>(D
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder =
         NewsViewHolder(ItemNewsBinding.inflate(LayoutInflater.from(parent.context), parent, false)).apply {
-            itemView.setOnClickListener {
+            val listener = View.OnClickListener {
                 val context = it.context
                 Intent(context, NewsActivity::class.java).apply {
                     putExtra("news", getItem(adapterPosition))
                     context.startActivity(this)
                 }
             }
+            binding.root.setOnClickListener(listener)
+            binding.cgTag.setOnClickListener(listener)
         }
 
 

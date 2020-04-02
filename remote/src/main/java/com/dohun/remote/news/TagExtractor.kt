@@ -13,7 +13,7 @@ class TagExtractorImpl : TagExtractor {
     }
 
     private val specialCharacterRegex: Regex by lazy { Regex("""[^가-힣xfe0-9a-zA-Z]""") }
-    private val numberRegex: Regex by lazy { Regex("""^[0-9]*""") }
+    private val numberRegex: Regex by lazy { Regex("""[0-9]*""") }
 
     override fun getTags(description: String): List<String>? {
         if (description.isBlank()) return null

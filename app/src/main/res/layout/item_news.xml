@@ -93,9 +93,6 @@
                 newsListTags="@{news.tags}"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="@id/gl_bottom"
-                app:layout_constraintLeft_toLeftOf="@id/tv_title"
-                app:layout_constraintRight_toRightOf="@id/gl_end"
                 app:singleLine="true">
 
                 <com.google.android.material.chip.Chip
@@ -116,9 +113,6 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="@style/SmallerText" />
             </com.google.android.material.chip.ChipGroup>
-
         </HorizontalScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </layout>
