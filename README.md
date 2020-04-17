@@ -1,5 +1,4 @@
 # NewsApplication
-My real trip, blind coding test  
 This is an extraordinary news application using [Google news RSS](https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko)  
 
 ### Functions
