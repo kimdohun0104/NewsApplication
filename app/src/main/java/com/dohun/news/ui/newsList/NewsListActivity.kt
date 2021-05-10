@@ -9,15 +9,17 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.dohun.news.R
 import com.dohun.news.databinding.ActivityNewsListBinding
+import com.dohun.news.ui.base.BaseActivity
 import com.dohun.news.ui.newsList.adapter.NewsListAdapter
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class NewsListActivity : AppCompatActivity() {
+class NewsListActivity : BaseActivity<ActivityNewsListBinding>() {
 
-    private lateinit var binding: ActivityNewsListBinding
+    override val layoutResId: Int
+        get() = R.layout.activity_news_list
 
     private val viewModel: NewsListViewModel by viewModel()
 
@@ -38,9 +40,7 @@ class NewsListActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_news_list)
         binding.viewModel = viewModel
-        binding.lifecycleOwner = this
 
         setupSkeleton()
         setupSnackbar()

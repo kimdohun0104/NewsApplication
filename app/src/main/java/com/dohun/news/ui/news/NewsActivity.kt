@@ -15,17 +15,18 @@ import androidx.databinding.DataBindingUtil
 import com.dohun.news.model.NewsModel
 import com.dohun.news.R
 import com.dohun.news.databinding.ActivityNewsBinding
+import com.dohun.news.ui.base.BaseActivity
 import com.google.android.material.appbar.AppBarLayout
 
-class NewsActivity : AppCompatActivity() {
+class NewsActivity : BaseActivity<ActivityNewsBinding>() {
 
-    private lateinit var binding: ActivityNewsBinding
+    override val layoutResId: Int
+        get() = R.layout.activity_news
 
     private val newsModel: NewsModel by lazy { intent.getParcelableExtra("news") as NewsModel }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_news)
         binding.news = newsModel
 
         setupWebView()
