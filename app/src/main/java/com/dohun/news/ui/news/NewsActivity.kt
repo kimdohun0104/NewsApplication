@@ -1,4 +1,4 @@
-package com.dohun.news.ui
+package com.dohun.news.ui.news
 
 import android.content.res.Configuration
 import android.graphics.Bitmap

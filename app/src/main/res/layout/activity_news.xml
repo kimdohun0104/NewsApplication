@@ -13,7 +13,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.NewsActivity">
+        tools:context=".ui.news.NewsActivity">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -26,7 +26,7 @@
 
                 <WebView
                     android:id="@+id/wb_news"
-                    newsDetailLink="@{news.link}"
+                    linkUrl="@{news.link}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </androidx.core.widget.NestedScrollView>
@@ -58,7 +58,7 @@
                     android:fitsSystemWindows="true">
 
                     <ImageView
-                        newsDetailImage="@{news.thumbnail}"
+                        imageUrl="@{news.thumbnail}"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:contentDescription="@null"
@@ -98,7 +98,7 @@
 
                     <com.google.android.material.chip.ChipGroup
                         android:id="@+id/cg_tags"
-                        newsDetailTag="@{news.tags}"
+                        tags="@{news.tags}"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         app:layout_constraintLeft_toLeftOf="@id/gl_toolbar_start"

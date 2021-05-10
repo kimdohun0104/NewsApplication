@@ -5,7 +5,7 @@ import com.dohun.news.model.Result.Failure
 import com.dohun.news.model.Result.Success
 import com.dohun.news.model.repository.NewsRepository
 import com.dohun.news.dummy.NewsModelDummy
-import com.dohun.news.viewModel.MainViewModel
+import com.dohun.news.ui.newsList.NewsListViewModel
 import com.jraska.livedata.test
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Before
@@ -15,7 +15,7 @@ import org.mockito.Mock
 import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations
 
-class MainViewModelTests {
+class NewsListViewModelTests {
 
     @get:Rule
     val testCoroutineRule = TestCoroutineRule()
@@ -26,12 +26,12 @@ class MainViewModelTests {
     @Mock
     private lateinit var newsRepository: NewsRepository
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: NewsListViewModel
 
     @Before
     fun init() {
         MockitoAnnotations.initMocks(this)
-        viewModel = MainViewModel(newsRepository)
+        viewModel = NewsListViewModel(newsRepository)
     }
 
     @Test

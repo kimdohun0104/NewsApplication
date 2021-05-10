@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.dohun.news.viewModel.MainViewModel" />
+            type="com.dohun.news.ui.newsList.NewsListViewModel" />
 
         <import type="android.view.View" />
     </data>
@@ -16,7 +16,7 @@
         android:id="@+id/cl_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
+        tools:context=".ui.newsList.NewsListActivity">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/tb_news"

@@ -1,4 +1,4 @@
-package com.dohun.news.ui.adapter
+package com.dohun.news.ui.newsList.adapter
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.dohun.news.model.NewsModel
 import com.dohun.news.databinding.ItemNewsBinding
-import com.dohun.news.ui.NewsActivity
+import com.dohun.news.ui.news.NewsActivity
 
 class NewsListAdapter : ListAdapter<NewsModel, NewsListAdapter.NewsViewHolder>(DIFF_CALLBACK) {
 

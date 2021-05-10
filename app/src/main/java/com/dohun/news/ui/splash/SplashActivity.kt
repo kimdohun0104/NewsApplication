@@ -1,14 +1,14 @@
-package com.dohun.news.ui
+package com.dohun.news.ui.splash
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.dohun.news.BuildConfig
 import com.dohun.news.R
 import com.dohun.news.databinding.ActivitySplashBinding
 import com.dohun.news.ui.base.BaseActivity
+import com.dohun.news.ui.newsList.NewsListActivity
 import kotlinx.coroutines.delay
 
 class SplashActivity : BaseActivity<ActivitySplashBinding>() {
@@ -19,7 +19,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     init {
         lifecycleScope.launchWhenCreated {
             delay(SPLASH_WAIT_MILLI)
-            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+            startActivity(Intent(this@SplashActivity, NewsListActivity::class.java))
             finish()
         }
     }

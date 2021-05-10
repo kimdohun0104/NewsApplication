@@ -1,4 +1,4 @@
-package com.dohun.news.ui
+package com.dohun.news.ui.newsList
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,19 +8,18 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.dohun.news.R
-import com.dohun.news.databinding.ActivityMainBinding
-import com.dohun.news.ui.adapter.NewsListAdapter
-import com.dohun.news.viewModel.MainViewModel
+import com.dohun.news.databinding.ActivityNewsListBinding
+import com.dohun.news.ui.newsList.adapter.NewsListAdapter
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainActivity : AppCompatActivity() {
+class NewsListActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityNewsListBinding
 
-    private val viewModel: MainViewModel by viewModel()
+    private val viewModel: NewsListViewModel by viewModel()
 
     private var isBackPressed = false
 
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_news_list)
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
@@ -75,7 +74,7 @@ class MainActivity : AppCompatActivity() {
         binding.rvNews.run {
             setHasFixedSize(true)
             adapter = NewsListAdapter()
-            addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL))
+            addItemDecoration(DividerItemDecoration(this@NewsListActivity, DividerItemDecoration.VERTICAL))
         }
     }
 

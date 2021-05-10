@@ -1,13 +1,13 @@
-package com.dohun.news.viewModel
+package com.dohun.news.ui.newsList
 
 import androidx.lifecycle.*
 import com.dohun.news.model.NewsModel
 import com.dohun.news.model.Result.Success
 import com.dohun.news.model.repository.NewsRepository
-import com.dohun.news.util.SingleLiveEvent
+import com.dohun.news.common.SingleLiveEvent
 import kotlinx.coroutines.launch
 
-class MainViewModel(
+class NewsListViewModel(
     private val newsRepository: NewsRepository
 ) : ViewModel() {
 

@@ -1,4 +1,4 @@
-package com.dohun.news.util
+package com.dohun.news.common
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.MutableLiveData

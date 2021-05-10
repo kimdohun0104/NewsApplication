@@ -17,9 +17,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
         <activity
-            android:name=".ui.NewsActivity"
+            android:name=".ui.news.NewsActivity"
             android:theme="@style/AppTheme.TransparentStatusBar" />
-        <activity android:name=".ui.SplashActivity">
+        <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -27,7 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.MainActivity" />
+        <activity android:name=".ui.newsList.NewsListActivity" />
     </application>
 
 </manifest>
