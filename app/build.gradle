@@ -14,8 +14,6 @@ android {
         targetSdkVersion Versions.targetSdkVersion
         versionCode Versions.versionCode
         versionName Versions.versionName
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -38,12 +36,10 @@ dependencies {
     implementation project(path: ':model')
 
     implementation Deps.material
-    // https://github.com/facebook/shimmer-android
     implementation Deps.shimmer
 
     implementation Deps.AndroidX.swipeRefreshLayout
 
-    // https://github.com/bumptech/glide
     implementation Deps.Glide.glide
 
     implementation Deps.Kotlin.kotlin
@@ -58,7 +54,6 @@ dependencies {
     implementation Deps.AndroidX.LifeCycle.runtimeKtx
     kapt Deps.AndroidX.LifeCycle.compiler
 
-    // https://github.com/InsertKoinIO/koin
     implementation Deps.AndroidX.Koin.viewModel
     implementation Deps.AndroidX.Koin.ext
 
@@ -66,6 +61,5 @@ dependencies {
     testImplementation Deps.Test.junit
     testImplementation Deps.Test.mockitoCore
     testImplementation Deps.Test.mockitoInline
-    testImplementation Deps.Test.liveDataTesting
     testImplementation Deps.Test.coreTesting
 }
