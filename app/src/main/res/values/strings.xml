@@ -11,9 +11,7 @@
 
     <!--feature: splash-->
     <string name="splash_version">v 1.0</string>
-    <string name="splash_description1">최신 뉴스를 제공합니다.</string>
-    <string name="splash_description2">뉴스의 키워드를 알아보세요</string>
-    <string name="splash_description3">뉴스를 클릭하면 원본 뉴스를 볼 수 있습니다.</string>
+    <string name="splash_description">최신 뉴스를 제공합니다.\n뉴스의 키워드를 알아보세요.\n뉴스를 클릭하면 원본 뉴스를 볼 수 있습니다.</string>
 
     <!--feature: news-->
     <string name="news">뉴스</string>

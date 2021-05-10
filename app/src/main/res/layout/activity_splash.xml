@@ -51,61 +51,21 @@
             app:layout_constraintRight_toRightOf="parent"
             app:tint="@color/colorBlue600" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/gl_description_begin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="80dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/gl_description_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_end="80dp" />
-
         <TextView
             android:id="@+id/tv_description1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
-            android:text="@string/splash_description1"
-            android:textColor="@color/colorGray600"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/tv_description2"
-            app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
-            app:layout_constraintRight_toRightOf="@id/gl_description_end"
-            app:layout_constraintTop_toBottomOf="@id/iv_logo_circle"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <TextView
-            android:id="@+id/tv_description2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="4dp"
-            android:text="@string/splash_description2"
-            android:textColor="@color/colorGray600"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/tv_description3"
-            app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
-            app:layout_constraintRight_toRightOf="@id/gl_description_end"
-            app:layout_constraintTop_toBottomOf="@id/tv_description1" />
-
-        <TextView
-            android:id="@+id/tv_description3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/splash_description3"
+            android:paddingHorizontal="80dp"
+            android:text="@string/splash_description"
             android:textColor="@color/colorGray600"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/tv_version"
-            app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
-            app:layout_constraintRight_toRightOf="@id/gl_description_end"
-            app:layout_constraintTop_toBottomOf="@id/tv_description2" />
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo_circle"
+            app:layout_constraintVertical_chainStyle="packed" />
 
         <TextView
             android:id="@+id/tv_version"
