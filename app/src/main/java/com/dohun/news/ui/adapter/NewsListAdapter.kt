@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.dohun.model.NewsModel
+import com.dohun.news.model.NewsModel
 import com.dohun.news.databinding.ItemNewsBinding
 import com.dohun.news.ui.NewsActivity
 

@@ -7,14 +7,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.dohun.news.BuildConfig
 import com.dohun.news.R
-import kotlinx.android.synthetic.main.activity_splash.*
+import com.dohun.news.databinding.ActivitySplashBinding
+import com.dohun.news.ui.base.BaseActivity
 import kotlinx.coroutines.delay
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
-    companion object {
-        private const val SPLASH_WAIT_MILLI = 1300L
-    }
+    override val layoutResId: Int
+        get() = R.layout.activity_splash
 
     init {
         lifecycleScope.launchWhenCreated {
@@ -27,8 +27,11 @@ class SplashActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
 
-        tv_version.text = "v${BuildConfig.VERSION_NAME}"
+        binding.tvVersion.text = "v${BuildConfig.VERSION_NAME}"
+    }
+
+    companion object {
+        private const val SPLASH_WAIT_MILLI = 1300L
     }
 }

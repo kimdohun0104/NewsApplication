@@ -1,10 +1,10 @@
 package com.dohun.news
 
 import android.app.Application
-import com.dohun.local.di.localModule
+import com.dohun.news.local.di.localModule
 import com.dohun.news.di.appModule
-import com.dohun.remote.di.remoteModule
-import com.dohun.repository.di.repositoryModule
+import com.dohun.news.di.repositoryModule
+import com.dohun.news.remote.di.remoteModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

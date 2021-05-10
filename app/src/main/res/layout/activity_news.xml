@@ -5,7 +5,7 @@
 
         <variable
             name="news"
-            type="com.dohun.model.NewsModel" />
+            type="com.dohun.news.model.NewsModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"

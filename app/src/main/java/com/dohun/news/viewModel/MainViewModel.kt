@@ -1,9 +1,9 @@
 package com.dohun.news.viewModel
 
 import androidx.lifecycle.*
-import com.dohun.model.NewsModel
-import com.dohun.model.Result.Success
-import com.dohun.model.repository.NewsRepository
+import com.dohun.news.model.NewsModel
+import com.dohun.news.model.Result.Success
+import com.dohun.news.model.repository.NewsRepository
 import com.dohun.news.util.SingleLiveEvent
 import kotlinx.coroutines.launch
 

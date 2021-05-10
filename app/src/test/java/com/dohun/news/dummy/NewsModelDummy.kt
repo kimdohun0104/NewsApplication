@@ -1,6 +1,6 @@
 package com.dohun.news.dummy
 
-import com.dohun.model.NewsModel
+import com.dohun.news.model.NewsModel
 
 object NewsModelDummy {
 

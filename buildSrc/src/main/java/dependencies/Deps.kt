@@ -6,7 +6,7 @@ object Deps {
     const val shimmer = "com.facebook.shimmer:shimmer:0.5.0"
 
     object GradlePlugin {
-        const val gradle = "com.android.tools.build:gradle:3.6.1"
+        const val gradle = "com.android.tools.build:gradle:4.2.0"
         const val kotlinGradle = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Kotlin.version}"
     }
 

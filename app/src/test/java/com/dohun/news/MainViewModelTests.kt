@@ -1,9 +1,9 @@
 package com.dohun.news
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.dohun.model.Result.Failure
-import com.dohun.model.Result.Success
-import com.dohun.model.repository.NewsRepository
+import com.dohun.news.model.Result.Failure
+import com.dohun.news.model.Result.Success
+import com.dohun.news.model.repository.NewsRepository
 import com.dohun.news.dummy.NewsModelDummy
 import com.dohun.news.viewModel.MainViewModel
 import com.jraska.livedata.test

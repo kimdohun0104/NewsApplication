@@ -1,7 +1,7 @@
 package com.dohun.remote
 
-import com.dohun.remote.news.TagExtractor
-import com.dohun.remote.news.TagExtractorImpl
+import com.dohun.news.remote.news.TagExtractor
+import com.dohun.news.remote.news.TagExtractorImpl
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

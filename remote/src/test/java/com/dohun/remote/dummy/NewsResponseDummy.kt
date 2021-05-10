@@ -1,6 +1,6 @@
 package com.dohun.remote.dummy
 
-import com.dohun.remote.response.NewsResponse
+import com.dohun.news.remote.response.NewsResponse
 
 object NewsResponseDummy {
 

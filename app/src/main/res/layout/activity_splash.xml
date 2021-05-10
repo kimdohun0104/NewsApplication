@@ -1,120 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.SplashActivity">
+<layout>
 
-    <ImageView
-        android:id="@+id/iv_logo_circle"
-        android:layout_width="168dp"
-        android:layout_height="168dp"
-        android:background="@drawable/bg_circle_blue800"
-        android:contentDescription="@null"
-        app:layout_constraintBottom_toBottomOf="@id/iv_logo"
-        app:layout_constraintLeft_toLeftOf="@id/iv_logo"
-        app:layout_constraintRight_toRightOf="@id/iv_logo"
-        app:layout_constraintTop_toTopOf="@id/iv_logo" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.SplashActivity">
 
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:contentDescription="@string/description_splash_logo"
-        android:src="@drawable/ic_google_news"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        <ImageView
+            android:id="@+id/iv_logo_circle"
+            android:layout_width="168dp"
+            android:layout_height="168dp"
+            android:background="@drawable/bg_circle_blue800"
+            android:contentDescription="@null"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo"
+            app:layout_constraintLeft_toLeftOf="@id/iv_logo"
+            app:layout_constraintRight_toRightOf="@id/iv_logo"
+            app:layout_constraintTop_toTopOf="@id/iv_logo" />
 
-    <ImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_rss_feed"
-        app:layout_constraintBottom_toBottomOf="@id/iv_logo_circle"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/iv_logo_circle"
-        app:tint="@color/colorOrange600" />
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/description_splash_logo"
+            android:src="@drawable/ic_google_news"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.2" />
 
-    <ImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_view_list"
-        app:layout_constraintBottom_toBottomOf="@id/iv_logo_circle"
-        app:layout_constraintLeft_toRightOf="@id/iv_logo_circle"
-        app:layout_constraintRight_toRightOf="parent"
-        app:tint="@color/colorBlue600" />
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_rss_feed"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo_circle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/iv_logo_circle"
+            app:tint="@color/colorOrange600" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_description_begin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="80dp" />
+        <ImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_view_list"
+            app:layout_constraintBottom_toBottomOf="@id/iv_logo_circle"
+            app:layout_constraintLeft_toRightOf="@id/iv_logo_circle"
+            app:layout_constraintRight_toRightOf="parent"
+            app:tint="@color/colorBlue600" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/gl_description_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="80dp" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_description_begin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="80dp" />
 
-    <TextView
-        android:id="@+id/tv_description1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/splash_description1"
-        android:textColor="@color/colorGray600"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/tv_description2"
-        app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
-        app:layout_constraintRight_toRightOf="@id/gl_description_end"
-        app:layout_constraintTop_toBottomOf="@id/iv_logo_circle"
-        app:layout_constraintVertical_chainStyle="packed" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_description_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="80dp" />
 
-    <TextView
-        android:id="@+id/tv_description2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:text="@string/splash_description2"
-        android:textColor="@color/colorGray600"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/tv_description3"
-        app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
-        app:layout_constraintRight_toRightOf="@id/gl_description_end"
-        app:layout_constraintTop_toBottomOf="@id/tv_description1" />
+        <TextView
+            android:id="@+id/tv_description1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/splash_description1"
+            android:textColor="@color/colorGray600"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_description2"
+            app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
+            app:layout_constraintRight_toRightOf="@id/gl_description_end"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo_circle"
+            app:layout_constraintVertical_chainStyle="packed" />
 
-    <TextView
-        android:id="@+id/tv_description3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="@string/splash_description3"
-        android:textColor="@color/colorGray600"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/tv_version"
-        app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
-        app:layout_constraintRight_toRightOf="@id/gl_description_end"
-        app:layout_constraintTop_toBottomOf="@id/tv_description2" />
+        <TextView
+            android:id="@+id/tv_description2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="@string/splash_description2"
+            android:textColor="@color/colorGray600"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_description3"
+            app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
+            app:layout_constraintRight_toRightOf="@id/gl_description_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_description1" />
 
-    <TextView
-        android:id="@+id/tv_version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:textColor="@color/colorGray600"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        <TextView
+            android:id="@+id/tv_description3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/splash_description3"
+            android:textColor="@color/colorGray600"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tv_version"
+            app:layout_constraintLeft_toLeftOf="@id/gl_description_begin"
+            app:layout_constraintRight_toRightOf="@id/gl_description_end"
+            app:layout_constraintTop_toBottomOf="@id/tv_description2" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/colorGray600"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

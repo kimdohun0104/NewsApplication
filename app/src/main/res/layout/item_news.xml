@@ -6,7 +6,7 @@
 
         <variable
             name="news"
-            type="com.dohun.model.NewsModel" />
+            type="com.dohun.news.model.NewsModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

@@ -1,6 +1,6 @@
 package com.dohun.repository.dummy
 
-import com.dohun.remote.response.NewsResponse
+import com.dohun.news.remote.response.NewsResponse
 
 object NewsResponseDummy {
     val responses = (0..5).map {

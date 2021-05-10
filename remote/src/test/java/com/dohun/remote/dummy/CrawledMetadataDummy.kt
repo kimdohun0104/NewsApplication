@@ -1,6 +1,6 @@
 package com.dohun.remote.dummy
 
-import com.dohun.remote.news.CrawledMetadata
+import com.dohun.news.remote.news.CrawledMetadata
 
 object CrawledMetadataDummy {
 

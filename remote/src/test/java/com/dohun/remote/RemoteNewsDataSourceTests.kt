@@ -1,12 +1,12 @@
 package com.dohun.remote
 
-import com.dohun.remote.dataSource.RemoteNewsDataSource
-import com.dohun.remote.dataSource.RemoteNewsDataSourceImpl
+import com.dohun.news.remote.dataSource.RemoteNewsDataSource
+import com.dohun.news.remote.dataSource.RemoteNewsDataSourceImpl
 import com.dohun.remote.dummy.CrawledMetadataDummy
 import com.dohun.remote.dummy.NewsResponseDummy
-import com.dohun.remote.news.MetadataCrawler
-import com.dohun.remote.news.NewsParser
-import com.dohun.remote.news.TagExtractor
+import com.dohun.news.remote.news.MetadataCrawler
+import com.dohun.news.remote.news.NewsParser
+import com.dohun.news.remote.news.TagExtractor
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Before

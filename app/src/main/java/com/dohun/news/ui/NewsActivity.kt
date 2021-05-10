@@ -12,7 +12,7 @@ import android.webkit.WebViewClient
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
-import com.dohun.model.NewsModel
+import com.dohun.news.model.NewsModel
 import com.dohun.news.R
 import com.dohun.news.databinding.ActivityNewsBinding
 import com.google.android.material.appbar.AppBarLayout

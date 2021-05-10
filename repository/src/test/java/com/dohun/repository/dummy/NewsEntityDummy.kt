@@ -1,6 +1,6 @@
 package com.dohun.repository.dummy
 
-import com.dohun.local.entity.NewsEntity
+import com.dohun.news.local.entity.NewsEntity
 
 object NewsEntityDummy {
 

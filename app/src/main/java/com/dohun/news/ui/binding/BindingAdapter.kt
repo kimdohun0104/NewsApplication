@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DecodeFormat
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
-import com.dohun.model.NewsModel
+import com.dohun.news.model.NewsModel
 import com.dohun.news.R
 import com.dohun.news.ui.adapter.NewsListAdapter
 import com.google.android.material.chip.Chip

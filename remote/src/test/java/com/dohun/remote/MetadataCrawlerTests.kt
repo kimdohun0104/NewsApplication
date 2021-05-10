@@ -1,7 +1,7 @@
 package com.dohun.remote
 
-import com.dohun.remote.news.JsoupMetadataCrawler
-import com.dohun.remote.news.MetadataCrawler
+import com.dohun.news.remote.news.JsoupMetadataCrawler
+import com.dohun.news.remote.news.MetadataCrawler
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test

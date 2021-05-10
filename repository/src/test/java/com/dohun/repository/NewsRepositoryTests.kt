@@ -1,14 +1,15 @@
 package com.dohun.repository
 
-import com.dohun.local.dataSource.LocalNewsDataSource
-import com.dohun.model.Result.Failure
-import com.dohun.model.Result.Success
-import com.dohun.model.repository.NewsRepository
-import com.dohun.remote.dataSource.RemoteNewsDataSource
+import com.dohun.news.local.dataSource.LocalNewsDataSource
+import com.dohun.news.model.Result.Failure
+import com.dohun.news.model.Result.Success
+import com.dohun.news.model.repository.NewsRepository
+import com.dohun.news.repository.NewsRepositoryImpl
+import com.dohun.news.remote.dataSource.RemoteNewsDataSource
 import com.dohun.repository.dummy.NewsEntityDummy
 import com.dohun.repository.dummy.NewsResponseDummy
-import com.dohun.repository.mapper.toEntity
-import com.dohun.repository.mapper.toModel
+import com.dohun.news.mapper.toEntity
+import com.dohun.news.mapper.toModel
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Before
